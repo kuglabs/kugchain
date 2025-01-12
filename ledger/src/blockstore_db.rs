@@ -429,7 +429,7 @@ impl Rocks {
                 DB::open_cf_descriptors(&db_options, path, cf_descriptors)?
             }
             AccessType::Secondary => {
-                let secondary_path = path.join("solana-secondary");
+                let secondary_path = path.join("kugchain-secondary");
                 info!(
                     "Opening Rocks with secondary (read only) access at: {secondary_path:?}. \
                     This secondary access could temporarily degrade other accesses, such as \

@@ -140,10 +140,10 @@ Verify that all of the build artifacts are present, then uncheck **"This is a pr
 
 Build artifacts can take up to 60 minutes after creating the tag before
 appearing.  To check for progress:
-* The `solana-secondary` Buildkite pipeline handles creating the Linux and macOS release artifacts and updated crates.  Look for a job under the tag name of the release: https://buildkite.com/solana-labs/solana-secondary.
+* The `kugchain-secondary` Buildkite pipeline handles creating the Linux and macOS release artifacts and updated crates.  Look for a job under the tag name of the release: https://buildkite.com/kuglabs/kugchain-secondary.
 * The Windows release artifacts are produced by GitHub Actions.  Look for a job under the tag name of the release: https://github.com/solana-labs/solana/actions.
 
-[Crates.io](https://crates.io/crates/solana) should have an updated Solana version.  This can take 2-3 hours, and sometimes fails in the `solana-secondary` job.
+[Crates.io](https://crates.io/crates/solana) should have an updated Solana version.  This can take 2-3 hours, and sometimes fails in the `kugchain-secondary` job.
 If this happens and the error is non-fatal, click "Retry" on the "publish crate" job
 
 ### Update software on testnet.solana.com

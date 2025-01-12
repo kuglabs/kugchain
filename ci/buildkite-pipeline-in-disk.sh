@@ -114,8 +114,8 @@ EOF
 
 trigger_secondary_step() {
   cat  >> "$output_file" <<"EOF"
-  - name: "Trigger Build on solana-secondary"
-    trigger: "solana-secondary"
+  - name: "Trigger Build on kugchain-secondary"
+    trigger: "kugchain-secondary"
     branches: "!pull/*"
     async: true
     build:
