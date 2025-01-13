@@ -114,15 +114,15 @@ command_step() {
     timeout_in_minutes: $3
     artifact_paths: "log-*.txt"
     agents:
-      queue: "${4:-solana}"
+      queue: "${4:-kugchain}"
 EOF
 }
 
 
 trigger_secondary_step() {
   cat  >> "$output_file" <<"EOF"
-  - name: "Trigger Build on solana-secondary"
-    trigger: "solana-secondary"
+  - name: "Trigger Build on kugchain-secondary"
+    trigger: "kugchain-secondary"
     branches: "!pull/*"
     async: true
     soft_fail: true
@@ -187,7 +187,7 @@ all_test_steps() {
     timeout_in_minutes: 35
     artifact_paths: "sbf-dumps.tar.bz2"
     agents:
-      queue: "solana"
+      queue: "kugchain"
 EOF
   else
     annotate --style info \
